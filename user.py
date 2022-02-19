@@ -6,6 +6,9 @@ class User :
     all_Users = []
 
     def __innit__(self, username , password):
+        '''
+        define properties for the objects
+        '''
         self.username = username 
         self.password = password
 
