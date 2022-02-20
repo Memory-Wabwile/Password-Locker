@@ -5,15 +5,15 @@ Memory Wabwile<br>
  https://github.com/Memory-Wabwile
 
 ## Description
-    Password Locker is an appliaction that enables users to login to the system and save their credentials including usernames and passwords for their various accounts including social media platfrorms.
-    
+Password Locker is an appliaction that enables users to login to the system and save their credentials including usernames and passwords for their various accounts including social media platfrorms.
+
 ## BDD
-    enter new to create a new user ; a new user will be created </br>
-    enter log to log into an existing account ; it will log into an existing account</br>
-    enter ex to exit the program ; it will quit and exit from the program</br>
-    enter nc to craete a new credential , it will create a new credential</br>
-    enter dc to display credentials; it will display the existing credentials
-    enter x to take you back to the first part
+enter new to create a new user ; a new user will be created </br>
+enter log to log into an existing account ; it will log into an existing account</br>
+enter ex to exit the program ; it will quit and exit from the program</br>
+enter nc to craete a new credential , it will create a new credential</br>
+enter dc to display credentials; it will display the existing credentials
+enter x to take you back to the first part
 
 ## Technologies Used
 <ul>Python 3.9</ul>
