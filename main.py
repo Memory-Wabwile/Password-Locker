@@ -86,7 +86,7 @@ def main():
         if decision == 'new':
             print("Enter your username")
             username=input()
-            passsword= input("Enter \"own\" to write your own password and \"\" to generate a random password \n")
+            passsword= input("Enter \"own\" to write your own password and  to generate a random password \n")
             if passsword == "own":
                 print("Enter your password")
                 password=input()
@@ -121,7 +121,7 @@ def main():
 
         while True:
             print("\n")
-            cred = input("Enter \"nc\"to create a new credential , \"\" to display credentials and \"x\" to go back to first step \n").lower()
+            cred = input("Enter \"nc\"to create a new credential ,   to display credentials and \"x\" to go back to first step \n").lower()
             print("\n")
 
             if cred == 'nc':
