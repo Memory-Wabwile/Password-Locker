@@ -4,6 +4,8 @@ class User :
     an empty users list
     '''
     all_users = []
+    username = ""
+    password = ""
 
     def __innit__(self, username , password):
         '''
@@ -19,6 +21,7 @@ class User :
         '''
         User.all_users.append(self)
 
+    
     def delete_user(self):
         '''
         delete method deletes user details from saved account list

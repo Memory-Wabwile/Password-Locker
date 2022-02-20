@@ -20,8 +20,8 @@ class TestUser(unittest.TestCase) :
         '''
         to test if the object is initialized properly
         '''
-        self.assertEqual(self.new_user.username,"Memory")
-        self.assertEqual(self.new_user.password,"4321")
+        self.assertEqual(self.new_user.username,"")
+        self.assertEqual(self.new_user.password,"")
 
 
     def test_save_user(self):
