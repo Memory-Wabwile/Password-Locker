@@ -63,7 +63,7 @@ def display_credentials(credentials):
     '''
     to display the credentials
     '''
-    return Credentials.display_credentials()
+    return Credentials.display_credentials(credentials)
 
 
 def find_credentials(account):
@@ -117,7 +117,7 @@ def main():
 
         while True:
             print("\n")
-            cred = input("Enter \"nc\"to create a new credential , \"dc\" to display credentials and \"x\" to exit \n").lower()
+            cred = input("Enter \"nc\"to create a new credential , \"dc\" to display credentials and \"x\" to go back to first step \n").lower()
             print("\n")
 
             if cred == 'nc':
@@ -133,8 +133,15 @@ def main():
 
 
             elif cred == 'dc':
-                print
+                print ("Your details are as follows")
+                if display_credentials(credentials):
+                    for account in display_credentials():
+                        print(f"For account {account.account} Your username is {userName} and Password : {passWord}")
+                else :
+                    print("Ivalid credentials")
 
+            elif cred == 'x': 
+                break
 
 
 
