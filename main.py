@@ -1,7 +1,5 @@
 from user import User           #importing user details
 from credentials import Credentials #importing the users credentials
-import random
-import string
 
 
 
@@ -69,7 +67,12 @@ def find_credentials(account):
     '''
     return Credentials.find_credentials(account)
 
-
+def random_password():
+    '''
+    generates a random password
+    '''
+    passwrd = Credentials.randomPassword("string")
+    return passwrd
 
 
 def main():
@@ -83,10 +86,14 @@ def main():
         if decision == 'new':
             print("Enter your username")
             username=input()
-            print("Enter your password")
-            password=input()
-            print("Confirm password")
-            passtwo=input()
+            passsword= input("Enter \"own\" to write your own password and \"\" to generate a random password \n")
+            if passsword == "own":
+                print("Enter your password")
+                password=input()
+                print("Confirm password")
+                passtwo=input()
+            # elif passsword == "gen":
+            #     password = random_password()
 
             if password == passtwo:
                 print("Your passwords match")

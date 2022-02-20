@@ -5,7 +5,7 @@ Memory Wabwile<br>
  https://github.com/Memory-Wabwile
 
 ## Description
-Password Locker is an appliaction that enables users to login to the system and save their credentials including usernames and passwords for their various accounts including social media platfrorms.
+Password Locker is an appliaction that enables users to login to the system and save their credentials including usernames and passwords for their various accounts including social media platforms.
 
 ## BDD
 enter new to create a new user ; a new user will be created </br>

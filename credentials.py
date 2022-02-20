@@ -1,3 +1,6 @@
+import random
+import string
+
 class Credentials :
     '''
     A credentials class to store all the user information and creation of new instances
@@ -59,8 +62,10 @@ class Credentials :
             return False
         
 
+    # def randomPassword (length = 4)  :       
+    #     password = string.ascii_lowercase + string.ascii_uppercase + string.digits + string.punctuation 
+    #     return ''.join(random.choice(password) for i in range(length)) 
 
-    
     
 
     
