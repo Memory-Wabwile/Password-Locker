@@ -40,6 +40,26 @@ class Credentials :
         Credentials.credentials_list.remove(self)
 
 
+    @classmethod
+    def display_credentials(cls):
+        '''
+        display the creadentials in the credentials list
+        '''
+        return cls.credentials_list
+
+    
+    @classmethod
+    def find_credentials(cls,userName):
+        '''
+        method finds the credentials depending on the account
+        '''
+        for credential in credentials_list:
+            if credential.account == account:
+                return credential
+            else:return False
+        
+
+
     
     
 
