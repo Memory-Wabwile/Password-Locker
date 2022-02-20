@@ -3,7 +3,7 @@ class User :
     '''
     an empty users list
     '''
-    all_Users = []
+    all_users = []
 
     def __innit__(self, username , password):
         '''
@@ -13,21 +13,21 @@ class User :
         self.password = password
 
    
-    def saveUser(self):
+    def save_user(self):
         '''
         save user method saves users into all users list
         '''
-        User.all_Users.append(self)
+        User.all_users.append(self)
 
     def delete_user(self):
         '''
         delete method deletes user details from saved account list
         '''
-        User.all_Users.remove(self)
+        User.all_users.remove(self)
 
         @classmethod
         def find_user(cls,username):
-            for user in cls.all_Users:
+            for user in cls.all_users:
                 if user.username == username:
                     return user
 

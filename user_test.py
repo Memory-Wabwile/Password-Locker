@@ -13,7 +13,7 @@ class TestUser(unittest.TestCase) :
         set up method to run before each test cases
         create user object
         '''
-        self.new_user = User("Memory" , "1234")   
+        self.new_user = User()   
 
     
     def test__init__(self): 
@@ -24,25 +24,43 @@ class TestUser(unittest.TestCase) :
         self.assertEqual(self.new_user.password,"4321")
 
 
-    def test_saveUser(self):
+    def test_save_user(self):
         '''
         to test if the user has been saved into the users list
         first line is for saving the new user
         '''
-        self.new_user.saveUser()
-        self.assertEqual(len(User.all_Users),1)
+        self.new_user.save_user()
+        self.assertEqual(len(User.all_users),1)
 
 
+    def tearDown(self):
+        '''
+        tearDown method does clean up after each test case
+        '''
+        User.all_users=[]
+
+   
     def test_save_multiple_users(self):
         '''
         test to check if we can save multiple users
         create test_user object to save the users
         '''
-        self.new_user.saveUser()
-        test_user = User("Fabiana" , "9876")
-        test_user.saveUser()
-        self.assertEqual(len(User.all_Users),2)
+        self.new_user.save_user()
+        test_user = User()
+        test_user.save_user()
+        self.assertEqual(len(User.all_users),2)
 
+
+    def test_delete_user(self):
+        '''
+        to test if it can delete a user
+        '''
+        self.new_user.save_user()
+        test_user = User()
+        test_user.save_user()
+
+        self.new_user.delete_user()
+        self.assertEqual(len(User.all_users),1)
 
     
 
