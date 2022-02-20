@@ -107,7 +107,33 @@ def main():
             username = input()
             print("Enter your password")
             password = input()
+            print(f"Welcome back {username} to password Locker")
+            print('*'*100)
 
+
+        elif decision == 'ex': 
+            break
+
+
+        while True:
+            print("\n")
+            cred = input("Enter \"nc\"to create a new credential , \"dc\" to display credentials and \"x\" to exit \n").lower()
+            print("\n")
+
+            if cred == 'nc':
+                print("Enter the name of the site you want to save password for")
+                account = input()
+                print("Enter your username of the site")
+                userName = input()
+                print("Enter the password of the site")
+                passWord = input()
+                print('*'*50)
+                print(f"You have successfully saved your credentials for {account}")
+                print('*'*100)
+
+
+            elif cred == 'dc':
+                print
 
 
 
