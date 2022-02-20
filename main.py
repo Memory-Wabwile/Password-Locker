@@ -37,14 +37,40 @@ def find_user(user):
     ##end of user
 
     ##Beginning of credentials
-def create_credentials(credentials)
+def create_credentials(credentials):
     '''
-    creatign new credentials
+    creating new credentials
     '''
     new_credential = (account,userName,passWord)
     return new_credential
 
 
+def save_credentials(credentials):
+    '''
+    to save the new credentials
+    '''
+    credentials.save_credentials()
+
+
+def delete_credentials(credentials):
+    '''
+    to delete a exissting credential from the list
+    '''
+    return credentials.delete_credentials(credentials)
+
+
+def display_credentials(credentials):
+    '''
+    to display the credentials
+    '''
+    return Credentials.display_credentials()
+
+
+def find_credentials(account):
+    '''
+    to find a specific credential account
+    '''
+    return Credentials.find_credentials(account)
 
 
 
