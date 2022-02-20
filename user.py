@@ -28,10 +28,10 @@ class User :
         '''
         User.all_users.remove(self)
 
-        @classmethod
-        def find_user(cls,username):
-            for user in cls.all_users:
-                if user.username == username:
-                    return user
+    @classmethod
+    def find_user(cls,username):
+        for user in cls.all_users:
+            if user.username == username:
+                return user
 
         

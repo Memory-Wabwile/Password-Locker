@@ -18,6 +18,13 @@ class Credentials :
 
 
     def __innit__(self,userName,passWord):
+          '''
+        define properties for the objects where credentials will be stored
+        '''
+        self.account = account
+        self.userName = userName
+        self.passWord =passWord
+
 
 
     
