@@ -49,14 +49,14 @@ class Credentials :
 
     
     @classmethod
-    def find_credentials(cls,userName):
+    def find_credentials(cls,account):
         '''
         method finds the credentials depending on the account
         '''
-        for credential in credentials_list:
+        for credential in cls.credentials_list:
             if credential.account == account:
-                return credential
-            else:return False
+                return True
+            return False
         
 
 

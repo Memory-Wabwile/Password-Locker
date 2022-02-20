@@ -70,7 +70,15 @@ class TestCredentials(unittest.TestCase):
         self.assertEqual(Credentials.display_credentials(),Credentials.credentials_list)
 
 
-    def 
+    def test_find_credentials(self):
+        '''
+        test to find the credentials using the account name
+        '''
+        self.new_credential.save_credentials()
+        test_credential = Credentials('Instagram' , 'Memory' , '4321')
+        test_credential.save_credentials()
+        credentiall=Credentials.find_credentials("account")
+        # self.assertEqual(credentiall.account,test_credential.account)
 
     
 if __name__ == '__main__' :
