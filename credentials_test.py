@@ -13,7 +13,7 @@ class TestCredentials(unittest.TestCase):
         set up method to run before each test cases
         
         '''
-        self.new_user = Credentials('Instagram' , 'Memory' , '4321')  
+        self.new_credential = Credentials('Instagram' , 'Memory' , '4321')  
 
 
     def test__init__(self): 

@@ -4,10 +4,10 @@ class User :
     an empty users list
     '''
     all_users = []
-    username = ""
-    password = ""
+    # username = ""
+    # password = ""
 
-    def __innit__(self, username , password):
+    def __init__(self, username , password):
         '''
         define properties for the objects
         '''

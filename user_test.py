@@ -13,15 +13,15 @@ class TestUser(unittest.TestCase) :
         set up method to run before each test cases
         create user object
         '''
-        self.new_user = User()   
+        self.new_user = User("Memory","9876")   
 
     
     def test__init__(self): 
         '''
         to test if the object is initialized properly
         '''
-        self.assertEqual(self.new_user.username,"")
-        self.assertEqual(self.new_user.password,"")
+        self.assertEqual(self.new_user.username,"Memory")
+        self.assertEqual(self.new_user.password,"9876")
 
 
     def test_save_user(self):
@@ -46,7 +46,7 @@ class TestUser(unittest.TestCase) :
         create test_user object to save the users
         '''
         self.new_user.save_user()
-        test_user = User()
+        test_user = User("Fabiana" , "1234")
         test_user.save_user()
         self.assertEqual(len(User.all_users),2)
 
@@ -56,7 +56,7 @@ class TestUser(unittest.TestCase) :
         to test if it can delete a user
         '''
         self.new_user.save_user()
-        test_user = User()
+        test_user = User("Fabiana" , "1234")
         test_user.save_user()
 
         self.new_user.delete_user()

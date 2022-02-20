@@ -17,7 +17,7 @@ class Credentials :
         return verified_user
 
 
-    def __innit__(self,account,userName,passWord):
+    def __init__(self,account,userName,passWord):
         '''
         define properties for the objects where credentials will be stored
         '''
