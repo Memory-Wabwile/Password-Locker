@@ -35,10 +35,22 @@ class TestCredentials(unittest.TestCase):
 
 
     def tearDown(self):
-         '''
+        '''
         tearDown method does clean up after each test case
         '''
         Credentials.credentials_list=[]
+
+
+    def test_delete_credentials(self):
+        '''
+        the delete credentials method deletes credentials from the credentials list"
+        '''
+        self.new_credential.save_credentials()
+        test_credentials = Credentials("Twitter" ,"Nimo", "1234")
+        test_credentials.save_credentials()
+
+        self.new_credential.delete_credentials()
+        self.assertEqual(len(Credentials.credentials_list),1)
 
     
 if __name__ == '__main__' :
