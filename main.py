@@ -22,6 +22,32 @@ def save_user(user):
     user[save_user(user)]
 
 
+def delete_user(user):
+    '''
+    to delete a user
+    '''
+    user.delete_user()
+
+def find_user(user):
+    '''
+    To find user
+    '''
+    user.find_user()
+
+    ##end of user
+
+    ##Beginning of credentials
+def create_credentials(credentials)
+    '''
+    creatign new credentials
+    '''
+    new_credential = (account,userName,passWord)
+    return new_credential
+
+
+
+
+
 
 def main():
     print("WELCOME TO PASSWORD LOCKER !!")
@@ -44,10 +70,18 @@ def main():
             else: print("Your passwords do not match try again")
             
 
-        # save_user(create_new_user(username,password))
-        print('*'*50)
-        print("Congratulations {username} your account has been created successfully")
-        
+            # save_user(create_new_user(username,password))
+            print('*'*50)
+            print(f"Congratulations {username} your account has been created successfully")
+            print('*'*50)
+
+
+        elif decision == 'log':
+            print("Please enter your username ")
+            username = input()
+            print("Enter your password")
+            password = input()
+
 
 
 
