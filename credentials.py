@@ -26,13 +26,21 @@ class Credentials :
         self.passWord =passWord
 
 
-    def save_credentials(self)
+    def save_credentials(self):
         '''
         save credentials method saves credentials into credentials list
         '''
         Credentials.credentials_list.append(self)
 
 
+    def delete_credentials(self):
+        '''
+        delete credentials method removes credentails from the credentials list
+        '''
+        Credentials.credentials_list.remove(self)
+
+
+    
     
 
     
