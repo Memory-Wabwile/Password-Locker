@@ -1,11 +1,8 @@
-from user import User
-'''
-importing user details
-'''
-from credentials import Credentials
-'''
-importing the users credentials
-'''
+from user import User           #importing user details
+from credentials import Credentials #importing the users credentials
+import random
+import string
+
 
 
 def create_new_user(username,password):
@@ -117,7 +114,7 @@ def main():
 
         while True:
             print("\n")
-            cred = input("Enter \"nc\"to create a new credential , \"dc\" to display credentials and \"x\" to go back to first step \n").lower()
+            cred = input("Enter \"nc\"to create a new credential , \"\" to display credentials and \"x\" to go back to first step \n").lower()
             print("\n")
 
             if cred == 'nc':
