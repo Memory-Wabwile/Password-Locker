@@ -4,8 +4,6 @@ class User :
     an empty users list
     '''
     all_users = []
-    # username = ""
-    # password = ""
 
     def __init__(self, username , password):
         '''
