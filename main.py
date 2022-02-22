@@ -14,7 +14,7 @@ def save_user(user):
     '''
     method to save new user
     '''
-    user[save_user(user)]
+    user.save_user(user)
 
 
 def delete_user(user):
@@ -32,33 +32,33 @@ def find_user(user):
     ##end of user
 
     ##Beginning of credentials
-def create_credentials(credentials):
+def create_credentials(account,userName,passWord):
     '''
     creating new credentials
     '''
-    new_credential = (account,userName,passWord)
+    new_credential = Credentials(account,userName,passWord)
     return new_credential
 
 
-def save_credentials(credentials):
+def save_credentials(credential):
     '''
     to save the new credentials
     '''
-    credentials.save_credentials()
+    credential.save_credentials()
 
 
-def delete_credentials(credentials):
+def delete_credentials(credential):
     '''
     to delete a exissting credential from the list
     '''
     return credentials.delete_credentials(credentials)
 
 
-def display_credentials(credentials):
+def display_credentials():
     '''
     to display the credentials
     '''
-    return Credentials.display_credentials(credentials)
+    return Credentials.display_credentials()
 
 
 def find_credentials(account):
@@ -71,8 +71,8 @@ def random_password():
     '''
     generates a random password
     '''
-    passwrd = Credentials.randomPassword("string")
-    return passwrd
+    password = Credentials.randomPassword("string")
+    return password
 
 
 def main():
@@ -86,19 +86,20 @@ def main():
         if decision == 'new':
             print("Enter your username")
             username=input()
-            passsword= input("Enter \"own\" to write your own password and  to generate a random password \n")
+            passsword= input("Enter \"own\" to write your own password and \"gen\" to generate a random password \n")
             if passsword == "own":
                 print("Enter your password")
                 password=input()
                 print("Confirm password")
                 passtwo=input()
-            # elif passsword == "gen":
-            #     password = random_password()
-
-            if password == passtwo:
-                print("Your passwords match")
-            else: print("Your passwords do not match try again")
             
+                if password == passtwo:
+                    print("Your passwords match")
+                else: print("Your passwords do not match try again")
+
+            elif passsword == "gen":
+                password = random_password()
+                print(f"Your password is {password}")
 
             # save_user(create_new_user(username,password))
             print('*'*50)
@@ -121,7 +122,7 @@ def main():
 
         while True:
             print("\n")
-            cred = input("Enter \"nc\"to create a new credential ,   to display credentials and \"x\" to go back to first step \n").lower()
+            cred = input("Enter \"nc\"to create a new credential , \"dc\"  to display credentials and \"x\" to go back to first step \n").lower()
             print("\n")
 
             if cred == 'nc':
@@ -129,8 +130,18 @@ def main():
                 account = input()
                 print("Enter your username of the site")
                 userName = input()
-                print("Enter the password of the site")
+                print("Enter a password \n")
                 passWord = input()
+                print("Confirm the password")
+                passstwo = input()
+
+                if passWord == passstwo:
+                    print("Your passwords match")
+                    
+                else: print("Your passwords do not match try again")
+                    
+                save_credentials(create_credentials(account,userName,passWord))
+                
                 print('*'*50)
                 print(f"You have successfully saved your credentials for {account}")
                 print('*'*100)
@@ -138,9 +149,9 @@ def main():
 
             elif cred == 'dc':
                 print ("Your details are as follows")
-                if display_credentials(credentials):
+                if display_credentials():
                     for account in display_credentials():
-                        print(f"For account {account.account} Your username is {userName} and Password : {passWord}")
+                        print(f"For {account.account}  account , Your username is : {userName} and Password : {passWord}")
                 else :
                     print("Ivalid credentials")
 

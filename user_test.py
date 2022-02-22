@@ -66,7 +66,7 @@ class TestUser(unittest.TestCase) :
         '''
         test to find user using username"
         '''
-          self.new_user.save_user()
+        self.new_user.save_user()
         test_user = User("Fabiana" , "1234")
         test_user.save_user()
         userr = User.find_user("Memory")

@@ -65,9 +65,10 @@ class Credentials :
     # def randomPassword (length = 4)  :       
     #     password = string.ascii_lowercase + string.ascii_uppercase + string.digits + string.punctuation 
     #     return ''.join(random.choice(password) for i in range(length)) 
-
     
-
+    def randomPassword (length = 4)  :       
+        password = ('a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z').lower and ('a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z').upper and ('0,1,2,3,4,5,6,7,8,9') and ('!&$#@*') 
+        return ''.join(random.choice(password) for i in range(4))
     
 
 
