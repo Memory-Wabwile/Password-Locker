@@ -156,14 +156,14 @@ def main():
                     print("Ivalid credentials")
 
 
-            elif cred == 'del':
-                print("Enter the account you want to delete")
-                userName = input()
-                if find_credentials(userName):
-                    delete_credentials(find_credentials(userName))
-                    print(f"{userName} account has  been deleted")
-                else:
-                    print("account doesn't exist")
+            # elif cred == 'del':
+            #     print("Enter the account you want to delete")
+            #     userName = input()
+            #     if find_credentials(userName):
+            #         delete_credentials(find_credentials(userName))
+            #         print(f"{userName} account has  been deleted")
+            #     else:
+            #         print("account doesn't exist")
             
             elif cred == 'x': 
                 break
