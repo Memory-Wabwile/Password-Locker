@@ -47,11 +47,11 @@ def save_credentials(credential):
     credential.save_credentials()
 
 
-def delete_credentials(credential):
+def delete_credentials(userName):
     '''
     to delete a exissting credential from the list
     '''
-    return credentials.delete_credentials(credentials)
+    return Credentials.delete_credentials(userName)
 
 
 def display_credentials():
@@ -122,7 +122,7 @@ def main():
 
         while True:
             print("\n")
-            cred = input("Enter \"nc\"to create a new credential , \"dc\"  to display credentials and \"x\" to go back to first step \n").lower()
+            cred = input("Enter \"nc\"to create a new credential , \"dc\"  to display credentials \"del\" to delete a credential and \"x\" to go back to first step \n").lower()
             print("\n")
 
             if cred == 'nc':
@@ -155,6 +155,16 @@ def main():
                 else :
                     print("Ivalid credentials")
 
+
+            elif cred == 'del':
+                print("Enter the account you want to delete")
+                userName = input()
+                if find_credentials(userName):
+                    delete_credentials(find_credentials(userName))
+                    print(f"{userName} account has  been deleted")
+                else:
+                    print("account doesn't exist")
+            
             elif cred == 'x': 
                 break
 
