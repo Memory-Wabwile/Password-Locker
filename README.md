@@ -11,18 +11,18 @@ Password Locker is an appliaction that enables users to login to the system and 
 
 Short code for the project
 
-Enter "new" to create a new user ; a new user will be created </br>
-<li>
+1. Enter "new" to create a new user ; a new user will be created </br>
+
 <ul>enter "own" to create your own password</ul>
 <ul>enter "gen" to generate a random password</ul>
-<li>
-enter "log" to log into an existing account ; it will log into an existing account</br>
-enter "ex" to exit the program ; it will quit and exit from the program</br>
-enter "nc" to create a new credential , it will create a new credential</br>
-enter "dc" to display credentials; it will display the existing credentials<br>
-enter "fn" to find a credential using an account name<br>
-enter "del" to delete a credential
-enter "x" to take you back to the first part
+
+2. enter "log" to log into an existing account ; it will log into an existing account</br>
+3. enter "ex" to exit the program ; it will quit and exit from the program</br>
+4. enter "nc" to create a new credential , it will create a new credential</br>
+5. enter "dc" to display credentials; it will display the existing credentials<br>
+6. enter "fn" to find a credential using an account name<br>
+7. enter "del" to delete a credential
+8. enter "x" to take you back to the first part
 
 ## Technologies Used
 <ul>Python 3.9</ul>
