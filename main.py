@@ -67,6 +67,12 @@ def find_credentials(account):
     '''
     return Credentials.find_credentials(account)
 
+def existing_account(account):
+    '''
+    function to return credentials
+    '''
+    return Credentials.exist(account)
+
 def random_password():
     '''
     generates a random password
@@ -122,7 +128,7 @@ def main():
 
         while True:
             print("\n")
-            cred = input("Enter \"nc\"to create a new credential , \"dc\"  to display credentials \"del\" to delete a credential and \"x\" to go back to first step \n").lower()
+            cred = input("Enter \"nc\"to create a new credential , \"dc\"  to display credentials , \"fn\" to find credentials ,  \"del\" to delete a credential and \"x\" to go back to first step \n").lower()
             print("\n")
 
             if cred == 'nc':
@@ -130,7 +136,7 @@ def main():
                 account = input()
                 print("Enter your username of the site")
                 userName = input()
-                print("Enter a password \n")
+                print("Enter a password ")
                 passWord = input()
                 print("Confirm the password")
                 passstwo = input()
@@ -149,21 +155,33 @@ def main():
 
             elif cred == 'dc':
                 print ("Your details are as follows")
+                print('*'*100)
                 if display_credentials():
                     for account in display_credentials():
                         print(f"For {account.account}  account , Your username is : {userName} and Password : {passWord}")
                 else :
                     print("Ivalid credentials")
 
+            elif cred == 'fn':
+                print('Enter account name you want to search for')
+                search = input()
+                if existing_account(search):
+                    search_account = find_credentials(search)
+                    print(f"account:{search_account.account}\n Username:{search_account.userName} \n Password:{search_account.passWord} ")
+                    print('*'*100)
 
-            # elif cred == 'del':
-            #     print("Enter the account you want to delete")
-            #     userName = input()
-            #     if find_credentials(userName):
-            #         delete_credentials(find_credentials(userName))
-            #         print(f"{userName} account has  been deleted")
-            #     else:
-            #         print("account doesn't exist")
+                else :
+                    print("Account doesn't exist")
+
+
+            elif cred == 'del':
+                print("Enter the account you want to delete")
+                userName = input()
+                if find_credentials(userName):
+                    delete_credentials(find_credentials(userName))
+                    print(f"{userName} account has  been deleted")
+                else:
+                    print("account doesn't exist")
             
             elif cred == 'x': 
                 break

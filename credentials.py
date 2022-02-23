@@ -61,8 +61,18 @@ class Credentials :
                 return credential
             #     return True
             # return False
-        
+     
+    @classmethod
+    def exist(cls,account):
+        '''
+        method to check if account exists in the list
+        '''
+        for credential in cls.credentials_list:
+            if credential.account == account:
+                return True
+            return False
 
+            
     # def randomPassword (length = 4)  :       
     #     password = string.ascii_lowercase + string.ascii_uppercase + string.digits + string.punctuation 
     #     return ''.join(random.choice(password) for i in range(length)) 

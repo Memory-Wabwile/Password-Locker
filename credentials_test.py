@@ -77,9 +77,18 @@ class TestCredentials(unittest.TestCase):
         self.new_credential.save_credentials()
         test_credential = Credentials('Instagram' , 'Memory' , '4321')
         test_credential.save_credentials()
-        credentiall=Credentials.find_credentials("account")
-        # self.assertEqual(credentiall.account,test_credential.account)
+        credentiall=Credentials.find_credentials("Instagram")
+        self.assertEqual(credentiall.account,test_credential.account)
 
-    
+    def test_exist(self):
+        '''
+        to test if an account exists
+        '''
+        self.new_credential.save_credentials()
+        test_credential = Credentials('Instagram' , 'Memory' , '4321')
+        test_credential.save_credentials()
+        exists = Credentials.exist('Instagram')
+        self.assertTrue(exists)
+        
 if __name__ == '__main__' :
     unittest.main()
